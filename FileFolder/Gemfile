@@ -25,6 +25,12 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+# Flexible authentication solution for Rails with Warden
+gem 'devise', '~> 4.2'
+# Forms made easy!
+gem 'simple_form', '~> 3.5'
+# Haml (HTML Abstraction Markup Language) is a layer on top of HTML or XML that's designed to express the structure of documents in a non-repetitive, elegant, and easy way
+gem 'haml', '~> 5.0', '>= 5.0.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
