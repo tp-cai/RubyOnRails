@@ -18,9 +18,9 @@
 
         - else
           = link_to "Login", new_user_session_path
-
-  %p.notice= notice
-  %p.alert= alert
+  .wrapper_with_padding
+    %p.notice{style: "color: purple"}= notice
+    %p.alert= alert
 
   %wrapper
     .white_place_holder

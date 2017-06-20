@@ -1,6 +1,17 @@
-- @docs.each do |doc|
-  %h2= link_to doc.title, doc
-  %p= "Created " + time_ago_in_words(doc.created_at) + " ago"
-  %p= truncate(doc.content, length:50)
+.wrapper_with_padding
+  #docs.clearfix
+    - if @doc.blank?
+      - @docs.each do |doc|
+        %a{href: (url_for [doc])}
+          .doc
+            %p.title= doc.title
+            %p.date= "Created " + time_ago_in_words(doc.created_at) + " ago"
+            %p.content= truncate(doc.content, length:50)
+    - else
+      %h2 Create File!
+      %p Uplode your first file here
+      = link_to "New File", new_doc_path
 
-= link_to "New File", new_doc_path
+.wrapper_with_padding
+  %div{style: "text-align: center; margin-left: auto; margin-right: auto"}
+    %a= link_to "New File", new_doc_path, class: "button", style: "border-radius:1.2rem;"
